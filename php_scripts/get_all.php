@@ -10,7 +10,7 @@ $sort = mysqli_real_escape_string($dbc, trim($_GET['sort']));
 $page = mysqli_real_escape_string($dbc, trim($_GET['page'] - 1));
 $page_size = mysqli_real_escape_string($dbc, trim($_GET['page_size']));
 
-if ($page != 0) $page = $page + 9;
+if ($page != 0) $page = $page * 10;
 
 if ($filter_age === 'all') $filter_age = ''; 
 if ($filter_gender === 'all') $filter_gender = '';
